@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Mail Demo</title>
+</head>
+<body>
+    <h1>This is home page</h1>
+    <form action="{% url 'send_mail' %}" method="POST">
+        {% csrf_token %}
+        <div>
+            <label for="name">Name:</label>
+            <input id="name" name="name" type="text" placeholder="Put Your name">
+        </div>
+        <div>
+            <label for="sbj">Subject:</label>
+            <input id="sbj" name="subject" type="text" placeholder="Put Your subject">
+        </div>
+        <div>
+            <label for="msg">Message:</label>
+            <input id="msg" name="message" type="text" placeholder="Put Your message">
+        </div>
+        <input type="submit", value="Send Mail">
+        
+    </form>
+</body>
+</html>
