@@ -23,8 +23,8 @@ def send_gmail(request):
         send_mail(
             subject,
             message,
-            'somvirs57@gmail.com',
-            ['somvirs575@hotmail.com'],
+            'from@mail.com',
+            ['to@mail.com'],
             fail_silently=False,
         )
 
